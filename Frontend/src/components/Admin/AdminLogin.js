@@ -1,33 +1,33 @@
-import React, { useRef } from 'react'
-import Header from '../Header'
+import React, { useRef } from "react";
+import Header from "../Header";
 
 const AdminLogin = () => {
-  const username = useRef()
-  const password = useRef()
+  const username = useRef();
+  const password = useRef();
   const handlesubmitform = async (e) => {
-    e.preventDefault()
-    const url = 'http://localhost:3001/admin/login'
+    e.preventDefault();
+    const url = "http://localhost:3000/api/v1/admins/login";
 
     const data = {
       username: username.current.value,
       Password: password.current.value,
-    }
+    };
 
-    const userDetails = JSON.stringify(data)
+    const userDetails = JSON.stringify(data);
     const response = await fetch(url, {
-      method: 'POST',
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: userDetails,
-    })
-    const data2 = await response.json()
+    });
+    const data2 = await response.json();
     if (response.ok === true) {
-      console.log(data2)
+      console.log(data2);
     } else {
-      console.log(data2)
+      console.log(data2);
     }
-  }
+  };
   return (
     <div>
       <Header />
@@ -64,7 +64,7 @@ const AdminLogin = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default AdminLogin
+export default AdminLogin;
