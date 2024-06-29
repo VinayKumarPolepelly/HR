@@ -1,7 +1,4 @@
-Hi this is Minor Project 
-We are 3 people who are assigned to this Project.We shared the tasks and worked on this mini project.
-We usually commit the code after completion of changes that we add to the project and also we pull the project to our system before pushing to github to avoid conflicts.
-
+Hi this is the Full Stack Project using MERN Stack.
 
 #Introduction to the HR Management Project
 Overview
